@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="810fe464-cb3e-4b14-84ee-c0f326456994">
+  <producedTypes>
+    <objectType typeId="645a622a-2843-4cf0-8856-47da223f05f7" valueTypeId="648573a7-0c4f-481e-9524-a007409ae34c"/>
+    <refType typeId="bd0a3f4e-77d7-4493-9ded-a483d77350b1" valueTypeId="c173c225-0777-4279-b002-4ee66c0901d1"/>
+    <selectionType typeId="88c19a80-8085-4315-a6d7-e1194e667a8f" valueTypeId="093a5ff0-ca13-46d7-a242-8d18966e6c2a"/>
+    <listType typeId="395fa6e0-2863-4d19-baee-d388a0c7694e" valueTypeId="fbc1ca72-4f58-406d-9f00-eade2717504c"/>
+    <managerType typeId="ca41af59-14b1-4241-997e-ec983bf691f2" valueTypeId="4b91fe9e-c5e4-4f1e-8d88-f2ecd57ef4eb"/>
+  </producedTypes>
+  <name>ВКМ_Сотрудники</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сотрудники (ВКМ)</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.ВКМ_Сотрудники.StandardAttribute.Code</inputByString>
+  <inputByString>Catalog.ВКМ_Сотрудники.StandardAttribute.Description</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>25</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <attributes uuid="cc9978d8-4a37-4242-ad0a-3383678b3b34">
+    <name>Специалист</name>
+    <synonym>
+      <key>ru</key>
+      <value>Специалист</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+</mdclass:Catalog>

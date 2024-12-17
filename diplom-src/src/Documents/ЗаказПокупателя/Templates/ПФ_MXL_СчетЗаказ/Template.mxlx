@@ -928,7 +928,7 @@
 				<i>5</i>
 				<c>
 					<f>43</f>
-					<parameter>Основание</parameter>
+					<parameter>р</parameter>
 					<detailParameter>Получатель</detailParameter>
 				</c>
 			</c>
@@ -2034,6 +2034,12 @@
 							<v8:content>Руководитель</v8:content>
 						</v8:item>
 					</tl>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>0</f>
+					<tl/>
 				</c>
 			</c>
 			<c>
