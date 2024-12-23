@@ -85,15 +85,18 @@
 
 ////////////////////////////////////////////////////////////////////////////////
 ВЫБРАТЬ
-	ВКМ_ГрафикОтпусков.Сотрудник КАК Сотрудник,
-	ВКМ_ГрафикОтпусков.КоличествоДнейЗаПериод КАК ДнейБыло
+	РАЗНОСТЬДАТ(ОсновныеНачисления.ПериодДействияНачало, ОсновныеНачисления.ПериодДействияКонец, ДЕНЬ) КАК ДнейБыло,
+	ОсновныеНачисления.ВКМ_Сотрудник КАК Сотрудник,
+	ОсновныеНачисления.ПериодДействияНачало КАК НачалоПериода,
+	ОсновныеНачисления.ПериодДействияКонец КАК КонецПериода
 ПОМЕСТИТЬ ВТ_ДнейБыло
 ИЗ
-	РегистрСведений.ВКМ_ГрафикОтпусков КАК ВКМ_ГрафикОтпусков
-ГДЕ
-	ВКМ_ГрафикОтпусков.Сотрудник = &amp;Сотрудник
-	И ВКМ_ГрафикОтпусков.Год = &amp;Год
-	И ВКМ_ГрафикОтпусков.ДатаОкончания &lt;= &amp;ТекущаяДата
+	ВТ_ПериодОбщий КАК ВТ_ПериодОбщий
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрРасчета.ВКМ_ОсновныеНачисления.ДанныеГрафика(
+				ВКМ_Сотрудник = &amp;Сотрудник
+					И ВидРасчета = &amp;ВидРасчета
+					И ПериодДействияКонец &lt;= &amp;ТекущаяДата) КАК ОсновныеНачисления
+		ПО ВТ_ПериодОбщий.НачалоПериода &lt;= ОсновныеНачисления.ПериодДействияНачало
 ;
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -172,6 +175,20 @@
 		<useRestriction>true</useRestriction>
 		<expression>ТекущаяДата()</expression>
 	</parameter>
+	<parameter>
+		<name>ВидРасчета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Вид расчета</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfCalculationTypesRef.ВКМ_ОсновныеНачисления</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">ПланВидовРасчета.ВКМ_ОсновныеНачисления.ВКМ_Отпуск</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
 	<settingsVariant>
 		<dcsset:name>Основной</dcsset:name>
 		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
@@ -206,6 +223,10 @@
 					<dcscor:parameter>Сотрудник</dcscor:parameter>
 					<dcscor:value xsi:nil="true"/>
 					<dcsset:userSettingID>36b3eaa0-bed7-4068-be77-64e6f493463e</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВидРасчета</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DesignTimeValue">ПланВидовРасчета.ВКМ_ОсновныеНачисления.ВКМ_Отпуск</dcscor:value>
 				</dcscor:item>
 			</dcsset:dataParameters>
 			<dcsset:outputParameters>

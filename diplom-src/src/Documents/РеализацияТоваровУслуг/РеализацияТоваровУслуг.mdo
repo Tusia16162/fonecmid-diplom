@@ -164,6 +164,7 @@
     </type>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
     <fillValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
@@ -408,6 +409,10 @@
   </templates>
   <templates uuid="4cdc9026-42f0-4239-9076-5954f65a94ec">
     <name>ВКМ_ПечатьАкта</name>
+    <synonym>
+      <key>ru</key>
+      <value>Акт</value>
+    </synonym>
   </templates>
   <commands uuid="3f6b7677-5ebb-4b56-8cc2-0665f4ebe120">
     <name>Печать</name>
