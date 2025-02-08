@@ -414,26 +414,4 @@
       <value>Акт</value>
     </synonym>
   </templates>
-  <commands uuid="3f6b7677-5ebb-4b56-8cc2-0665f4ebe120">
-    <name>Печать</name>
-    <group>FormCommandBarImportant</group>
-    <commandParameterType>
-      <types>DocumentRef.РеализацияТоваровУслуг</types>
-    </commandParameterType>
-    <parameterUseMode>Multiple</parameterUseMode>
-    <representation>Auto</representation>
-  </commands>
-  <commands uuid="02819e57-99c5-4d53-b2ce-527d6e16bb77">
-    <name>ВКМ_ПечатьАкта</name>
-    <synonym>
-      <key>ru</key>
-      <value>Печать Акта</value>
-    </synonym>
-    <group>FormCommandBarImportant</group>
-    <commandParameterType>
-      <types>DocumentRef.РеализацияТоваровУслуг</types>
-    </commandParameterType>
-    <parameterUseMode>Multiple</parameterUseMode>
-    <representation>Auto</representation>
-  </commands>
 </mdclass:Document>
